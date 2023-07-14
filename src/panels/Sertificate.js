@@ -43,7 +43,7 @@ const Sertificate = ({id, firstPersonParent, secondPersonParent}) => {
 		  	canvas.height = img.naturalHeight;
 			
 		  	context.drawImage(img, 0, 0, canvas.width, canvas.height);
-
+			
 			context.font = 'bold 16px Arial';
 			context.textAlign = 'center';
 			context.textBaseline = 'middle';	  
