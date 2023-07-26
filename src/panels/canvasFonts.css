@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'OpenSans'; /* Здесь менять название шрифта */
+    src: url('../fonts/OpenSans.ttf'); /* Здесь менять путь к файлу со шрифтом */
+}
+
+canvas {
+    font-family: 'OpenSans'; /* Здесь менять название шрифта */
+}

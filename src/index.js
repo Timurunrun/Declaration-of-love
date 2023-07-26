@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import './panels/canvasFonts.css';
 import bridge from "@vkontakte/vk-bridge";
 import App from "./App";
 

@@ -11,6 +11,7 @@ const Sertificate = ({id, firstPersonParent, secondPersonParent}) => {
 	const canvasRef = useRef(null);
 	var [firstPerson, setFirstPerson] = useState(firstPersonParent);
 	var [secondPerson, setSecondPerson] = useState(secondPersonParent);
+	var nameOneX, nameOneY, nameTwoX, nameTwoY;
 	
 	useEffect(() => {
 		
@@ -32,7 +33,7 @@ const Sertificate = ({id, firstPersonParent, secondPersonParent}) => {
 
 		context.fillStyle = 'black';
 
-		context.font = 'bold 20px Arial';
+		context.font = 'bold 20px "Arial"';
 		context.textAlign = 'center';
 		context.textBaseline = 'middle';
 
@@ -42,9 +43,11 @@ const Sertificate = ({id, firstPersonParent, secondPersonParent}) => {
 		  	canvas.width = img.naturalWidth;
 		  	canvas.height = img.naturalHeight;
 			
+			context.clearRect(0, 0, canvas.width, canvas.height);
+
 		  	context.drawImage(img, 0, 0, canvas.width, canvas.height);
 			
-			context.font = 'bold 16px Arial'; //здесь менять шрифт
+			context.font = 'bold 16px "Arial"'; //здесь менять шрифт
 			context.textAlign = 'center';
 			context.textBaseline = 'middle';	  
 				

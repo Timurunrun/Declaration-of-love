@@ -29,7 +29,7 @@ const App = () => {
 
 	const SubNow = async () => {
 		await bridge.send('VKWebAppJoinGroup', {
-			group_id: 129710506
+			group_id: 129710506 //https://stage-app51682597-32c692379c9b.pages.vk-apps.com/index.html
 			})
 			.then((data) => { 
 				if (data.result) {
