@@ -29,7 +29,7 @@ const App = () => {
 
 	const SubNow = async () => {
 		await bridge.send('VKWebAppJoinGroup', {
-			group_id: 146219460
+			group_id: 129710506
 			})
 			.then((data) => { 
 				if (data.result) {

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Group, Panel, PanelHeader, Div, Button, FixedLayout, FormLayout } from '@vkontakte/vkui';
 
-import sert from '../img/sertificate.jpg';
+import sert from '../img/sertificate.jpg'; //здесь менять шаблон сертификата
 
 const Sertificate = ({id, firstPersonParent, secondPersonParent}) => {
 
@@ -44,12 +44,20 @@ const Sertificate = ({id, firstPersonParent, secondPersonParent}) => {
 			
 		  	context.drawImage(img, 0, 0, canvas.width, canvas.height);
 			
-			context.font = 'bold 16px Arial';
+			context.font = 'bold 16px Arial'; //здесь менять шрифт
 			context.textAlign = 'center';
 			context.textBaseline = 'middle';	  
-						
-			context.fillText(firstPerson, canvas.width / 2, canvas.height / 3 + 80);
-			context.fillText(secondPerson, canvas.width / 2, canvas.height / 2 + 70);
+				
+			/*	Здесь менять расположение текста */
+
+			nameOneX = canvas.width / 2; //координаты первого имени по x
+			nameOneY = canvas.height / 3 + 80; //координаты первого имени по y
+
+			nameTwoX = canvas.width / 2; //координаты второго имени по x
+			nameTwoY = canvas.height / 2 + 70; //координаты второго имени по y
+
+			context.fillText(firstPerson, nameOneX, nameOneY);
+			context.fillText(secondPerson, nameTwoX, nameTwoY);
 		};
 	}, [canvasRef, firstPerson, secondPerson]);
 	
